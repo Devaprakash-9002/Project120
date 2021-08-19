@@ -1,0 +1,172 @@
+<html>
+
+<head>
+  <title>Realtime Image Identification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <center>
+        <div class="conclusion">
+            Accuracy between MobileNet and Google Lens
+        </div>
+        <ol>
+            <div class="test_image_and_result col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                Test Image - 
+                    <img src="bottle.jpg" class="img-responsive images">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on GOOGLE LENS: 
+                    <span>Water Bottle</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on MOBILENET: 
+                    <span>Cocktail shaker</span>
+                </h5>
+                <div class="mini_result col-xs-12">
+                    <h4>Result: </h4>
+                    <h4>Google Lens got the right answer</h4><hr>
+            </div>
+                <br><br>
+
+            <div class="test_image_and_result col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+        Test Image
+                    <img src="pen.jpg" class="img-responsive images" style="width: 700px; height: 300px;">
+                </li>
+    
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on GOOGLE LENS: 
+                    <span>Pen</span>
+                
+    
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on MOBILENET: 
+                    <span>Pen</span>
+                </h5>
+                <div class="mini_result col-xs-12">
+                    <h4>Result: </h4>
+                <h4>Both Got it right</h4><hr>
+            </div>
+            <br><br>
+
+            <div class="test_image_and_result col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                Test Image 
+                    <img src="pencil.jpg" class="img-responsive images">
+                </li>
+        
+                    <h5 class="col-sm-4 col-xs-12 output_tags">
+                        Output on GOOGLE LENS: 
+                        <span>Wooden Pencil</span>
+                    </h5>
+        
+                    <h5 class="col-sm-4 col-xs-12 output_tags">
+                        Output on MOBILENET: 
+                        <span>Pencil</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result: </h4>
+                    <h4>Both got it right</h4><hr>
+            </div>
+            <br><br>
+            <div class="test_image_and_result col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                Test Image -
+                    <img src="pouch.jpg" class="img-responsive images" style="width: 500px; height: 200px;">
+                </li>
+    
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on GOOGLE LENS: 
+                    <span>Eyeglass box</span>
+                </h5>
+    
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on MOBILENET: 
+                    <span>Pencil pouch</span>
+                </h5>
+                <div class="mini_result col-xs-12">
+                    <h4>Result: </h4>
+                <h4>MobileNet got it right</h4><hr>
+            </div>
+            <br><br>
+            <div class="test_image_and_result col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    Test Image - 
+                    <img src="mouse.jpg" class="img-responsive images" style="width: 600px; height: 400px;">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on GOOGLE LENS: 
+                    <span>Computer mouse</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on MOBILENET: 
+                    <span>Computer mouse</span>
+                </h5>
+                <div class="mini_result col-xs-12">
+                    <h4>Result: </h4>
+                <h4>Both got it right</h4><hr>
+            </div>
+            <br><br>
+            <div class="test_image_and_result col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    Test Image - 
+                    <img src="book.jpg" class="img-responsive images" style="width: 300px; height: 500px;">
+                </li>
+    
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on GOOGLE LENS: 
+                    <span>Book</span>
+                </h5>
+    
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on MOBILENET: 
+                    <span>Book</span>
+                </h5>
+                <div class="mini_result col-xs-12">
+                    <h4>Result: </h4>
+                <h4>This one was easy. So both got it right.</h4><hr>
+            </div>
+            <br><br>
+            <div class="test_image_and_result col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    Test Image - 
+                    <img src="clock.jpg" class="img-responsive images" style="width: 400px; height: 400px;">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on GOOGLE LENS: 
+                    <span>Clock</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12 output_tags">
+                    Output on MOBILENET: 
+                    <span>Wall clock</span>
+                </h5>
+                <div class="mini_result col-xs-12">
+                    <h4>Result: </h4>
+                <h4>MobileNet got it right</h4><hr>
+            </div>
+            <br><br>
+            </div>
+        </ol>
+        <div class="conclusion">
+            I tested 7 items out of which Google Lens got 5 right and MobileNet <br>got 6 right. So MobileNet is more accurate.
+        </div>
+    </center>
+</body>
+
+</html>
